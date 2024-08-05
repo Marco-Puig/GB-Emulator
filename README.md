@@ -23,4 +23,4 @@ cd C:\GB-Emulator\src\build \
 Then, run "cmake .." and after "make" or "Makefile"
 
 ## Run Build
-In the /build directory, type gbemu/gbemu to run your newly create build
+In the /build directory, type "gbemu/gbemu" to run your newly create build
