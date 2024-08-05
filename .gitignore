@@ -1,0 +1,6 @@
+Dockerfile
+help/help.md.*
+root/
+
+*.py[co]
+*.swp
