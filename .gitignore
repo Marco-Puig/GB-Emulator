@@ -1,7 +1,7 @@
 # Dockerfile
 help/help.md.*
 root/
-work/src/build/
+src/build/
 
 *.py[co]
 *.swp
