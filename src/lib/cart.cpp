@@ -6,7 +6,7 @@ typedef struct
     u32 rom_size;
     u8 *rom_data;
     rom_header *header;
-} cart_context; // make into class to expand functionality later on
+} cart_context; // make into class to expand functionality later on (prehaps for debugging and save states)
 
 static cart_context ctx;
 

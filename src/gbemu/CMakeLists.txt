@@ -16,10 +16,10 @@ set(MAIN_SOURCES
     main.cpp
     ../lib/emu.cpp 
     ../lib/cart.cpp
-    ../lib/cpu.c
-    ../lib/ppu.c
-    ../lib/timer.c
-    ../lib/bus.c
+    ../lib/cpu.cpp
+    ../lib/ppu.cpp
+    ../lib/timer.cpp
+    ../lib/bus.cpp
 )
 
 file(GLOB HEADERS "${PROJECT_SOURCE_DIR}/include/*.h")
