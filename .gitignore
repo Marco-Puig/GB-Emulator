@@ -2,6 +2,7 @@
 help/help.md.*
 root/
 src/build/
+.vscode/
 
 *.py[co]
 *.swp

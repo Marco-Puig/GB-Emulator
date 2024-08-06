@@ -1,13 +1,17 @@
-#pragma once
+#ifndef EMU_H
+#define EMU_H
 
-#include <common.h>
+#include <cart.h>
 
-typedef struct {
+typedef struct
+{
     bool paused;
     bool running;
     u64 ticks;
 } emu_context;
 
-int emu_run(int argc, char **argv);
+int emu_run(std::ifstream &file);
 
 emu_context *emu_get_context();
+
+#endif

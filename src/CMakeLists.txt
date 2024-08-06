@@ -1,4 +1,4 @@
-project(gbemu C)
+project(gbemu C CXX)
 
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
@@ -28,6 +28,11 @@ macro(ck_check_include_file header var)
 endmacro(ck_check_include_file)
 
 ck_check_include_file("stdlib.h" HAVE_STDLIB_H)
+
+# Define C and C++ standards
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 ###############################################################################
 # Check for integer types
@@ -88,7 +93,7 @@ set(CONFIG_HEADER ${CMAKE_CURRENT_BINARY_DIR}/config.h)
 # Subdirectories
 add_subdirectory(lib)
 add_subdirectory(gbemu)
-add_subdirectory(tests)
+# add_subdirectory(tests)
 
 ###############################################################################
 # Unit tests

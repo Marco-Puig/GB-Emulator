@@ -1,8 +1,18 @@
-#pragma once
+#ifndef CART_H
+#define CART_H
 
 #include <common.h>
+#include <iostream>
+#include <fstream>
+#include <istream>
+#include <vector>
+#include <stdio.h>
+#include <cpu.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 
-typedef struct {
+typedef struct
+{
     u8 entry[4];
     u8 logo[0x30];
 
@@ -19,4 +29,6 @@ typedef struct {
     u16 global_checksum;
 } rom_header;
 
-bool cart_load(char *cart);
+bool cart_load(std::ifstream &file);
+
+#endif
