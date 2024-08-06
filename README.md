@@ -8,25 +8,35 @@ Portable Gameboy Emulator
 
 # Setup
 
-## Download Libs and Tools
+## Docker Instructions
 
-RUN apt update && apt install -y \ \
- g++ \ \
- gdb \ \
- make \ \
- cmake \ \
- git \ \
- check \ \
- build-essential \ \
- libsdl2-dev \ \
- libsdl2-ttf-dev
+### Build Docker Ubuntu Image
 
-## Create Build
+Run in directory with Dockerfile
 
+```bash
+docker build . -t emu_image
+```
+
+Confirm image is built
+
+```bash
+docker ps -a
+```
+
+### Run Container
+
+```bash
+docker run -it -v "<your-proj-dir>:/work" emu_image
+```
+
+## Build
+
+Build Project in Build Directory
+
+```bash
 cd /build
 cmake -S ../work/src -B /build
 make
-
-## Run Build
-
-In the /build directory, type "gbemu/gbemu" to run your newly created build
+gbemu/gbemu
+```
