@@ -2,9 +2,9 @@
 
 Portable Gameboy Emulator
 
-## Current Progress - 8/4/2024
+## Current Progress - 8/6/2024
 
-![Screenshot 2024-08-05 023926](https://github.com/user-attachments/assets/08ff2b84-1ae5-4058-a48c-179aef9ccb41)
+![image](https://github.com/user-attachments/assets/b52a1d06-f110-4402-aee2-a5ba466698b6)
 
 # Setup
 
