@@ -3,6 +3,8 @@
 #include <cpu.h>
 #include <emu.h>
 
+// CPU Instructions Handler/Processor - Handles the op codes, maybe more efficient to use a massive switch statement
+
 static void proc_none(cpu_context *ctx)
 {
     std::cerr << "INVALID INSTRUCTION!\n";
