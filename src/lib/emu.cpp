@@ -37,7 +37,7 @@ int emu_run(std::ifstream &file)
     TTF_Init();
     std::cout << "TTF Active" << std::endl;
 
-    // cpu_init(); // need to create cpu functionality
+    cpu_init(); // need to create cpu functionality
 
     ctx.running = true;
     ctx.paused = false;
@@ -51,14 +51,20 @@ int emu_run(std::ifstream &file)
             continue;
         }
 
-        //  if (!cpu_step()) // need to create cpu functionality
-        //  {
-        std::cout << "CPU Stopped" << std::endl;
-        return -3;
-        //  }
+        if (!cpu_step()) // need to create cpu functionality
+        {
+            std::cout << "CPU Stopped" << std::endl;
+            return -3;
+        }
 
         ctx.ticks++;
     }
 
     return 0;
+}
+
+// Emulate the CPU cycles - where we will likely implement speed up functionality
+void emu_cycles(int cpu_cycles)
+{
+    // TODO: Implement the CPU cycles
 }

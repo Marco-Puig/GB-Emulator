@@ -14,4 +14,6 @@ int emu_run(std::ifstream &file);
 
 emu_context *emu_get_context();
 
+void emu_cycles(int cpu_cycles);
+
 #endif

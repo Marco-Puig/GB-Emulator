@@ -11,7 +11,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 
-typedef struct
+struct rom_header
 {
     u8 entry[4];
     u8 logo[0x30];
@@ -27,8 +27,10 @@ typedef struct
     u8 version;
     u8 checksum;
     u16 global_checksum;
-} rom_header;
+};
 
 bool cart_load(std::ifstream &file);
+u8 cart_read(u16 address);
+void cart_write(u16 address, u8 value);
 
 #endif

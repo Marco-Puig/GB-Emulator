@@ -1,9 +1,9 @@
-#pragma once
+// MACROS and global helper functions that are used throughout the project
 
-#include <stdint.h>
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
+#ifndef COMMON_H
+#define COMMON_H
+
+#include <stdint.h> // https://en.cppreference.com/w/cpp/types/integer
 
 typedef uint8_t u8;
 typedef uint16_t u16;
@@ -17,3 +17,5 @@ typedef uint64_t u64;
 #define BETWEEN(a, b, c) ((a >= b) && (a <= c))
 
 void delay(u32 ms);
+
+#endif

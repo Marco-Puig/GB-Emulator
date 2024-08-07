@@ -180,3 +180,24 @@ bool cart_load(std::ifstream &file)
 
     return true;
 }
+
+// Read the Rom Data from the cartridge if the address is less than 0x8000
+u8 cart_read(u16 address)
+{
+    if (address < 0x8000)
+    {
+        return ctx.rom_data[address];
+    }
+
+    std::cerr << "Invalid read from cartridge address: " << std::hex << address << std::endl;
+    return 0;
+}
+
+// Write the Rom Data to the cartridge if the address is less than 0x8000
+void cart_write(u16 address, u8 value)
+{
+    if (address < 0x8000)
+    {
+        ctx.rom_data[address] = value;
+    }
+}
